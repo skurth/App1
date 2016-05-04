@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.EditItem">
+  <StackLayout x:Name="myStackLayout" VerticalOptions="FillAndExpand">
+    <Label Text="{Binding Name}" HorizontalOptions="CenterAndExpand"></Label>
+    <Label Text="{Binding Rang}" HorizontalOptions="CenterAndExpand"></Label>
+    <Label Text="{Binding Geld}" HorizontalOptions="CenterAndExpand"></Label>
+  </StackLayout>
+</ContentPage>

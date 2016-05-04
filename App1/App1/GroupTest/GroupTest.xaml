@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.GroupTest.GroupTest">
+  <!--<Picker x:Name="myPicker" Title="TestPicker" IsVisible="false"></Picker>-->
+
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Name="Save" Activated="SaveData"  Order="Primary" Priority="0" />
+    <!--<ToolbarItem Name="Menu2" Activated="OnClick"  Order="Secondary" Priority="1" />
+    <ToolbarItem Name="Menu3" Activated="OnClick"  Order="Secondary" Priority="2" />-->
+  </ContentPage.ToolbarItems>
+  
+  <ListView x:Name="myListView"
+            IsGroupingEnabled="true"
+            GroupDisplayBinding="{Binding Name}"
+            GroupShortNameBinding="{Binding ShortName}"
+            HasUnevenRows="true"
+            IsPullToRefreshEnabled="true">
+    
+   
+    <!--<ListView.ItemTemplate>
+      <DataTemplate>
+        <TextCell Text="{Binding FirstName}" Detail="{Binding Age}"></TextCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>-->
+  </ListView>
+
+  
+  
+</ContentPage>

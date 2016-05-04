@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Page1">
+
+  <StackLayout x:Name="myStackLayout" VerticalOptions="FillAndExpand">
+    <Label Text="{Binding Name}" HorizontalOptions="CenterAndExpand"></Label>
+    <Label Text="{Binding Rang}" HorizontalOptions="CenterAndExpand"></Label>
+    <Label Text="{Binding Geld}" HorizontalOptions="CenterAndExpand"></Label>
+    <Button Text="Geld erhöhen" Command="{Binding GeldErhoehen}" HorizontalOptions="CenterAndExpand"></Button>
+
+    <ListView x:Name="myListView" ItemTapped="onItemTapped" IsPullToRefreshEnabled="true">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <TextCell Text="{Binding Name}" Detail="{Binding Geld}">
+            <TextCell.ContextActions>
+              <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Text="Löschen" IsDestructive="True"></MenuItem>
+            </TextCell.ContextActions>
+          </TextCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+
+  
+</ContentPage>
